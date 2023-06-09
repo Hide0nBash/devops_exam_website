@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build: ../
+    ports:
+      - 9999:80
+    volumes:
+      - ../src:/var/www/html/website
+    container_name: devops-website
+    # command: ["/bin/bash", "-c", "service apache2 start"]
+    stdin_open: true
+    tty: true
